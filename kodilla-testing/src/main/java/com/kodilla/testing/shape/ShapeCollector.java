@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import com.kodilla.testing.shape.*;
 
 public class ShapeCollector {
-ArrayList<Shape> listOfShapes = new ArrayList<Shape>();
+private ArrayList<Shape> listOfShapes = new ArrayList<Shape>();
 
-
+    public int checkingListSize(){
+        return listOfShapes.size();
+    }
     public void addFigure(Shape shape){
         // do nothing
     }

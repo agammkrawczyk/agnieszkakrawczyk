@@ -15,7 +15,7 @@ public class ShapeCollectorTestSuite {
         // When
         shapeCollector.addFigure( circle );
         /* Then */
-        Assert.assertEquals( 1, shapeCollector.listOfShapes.size() );
+        Assert.assertEquals( 1, shapeCollector.checkingListSize() );
     }
 
     @Test
@@ -24,11 +24,12 @@ public class ShapeCollectorTestSuite {
         ShapeCollector shapeCollector = new ShapeCollector();
         Square square = new Square( 4.0 );
         shapeCollector.addFigure( square );
+        shapeCollector.addFigure( square );
 
         //When
         shapeCollector.removeFigure( square );
         //Then
-        Assert.assertTrue(shapeCollector.listOfShapes.size()==1 );
+        Assert.assertTrue(shapeCollector.checkingListSize()==1 );
     }
 
     @Test
@@ -40,11 +41,11 @@ public class ShapeCollectorTestSuite {
 
         //When
         for (int i = 0; i < 10; i++) {
-            shapeCollector.listOfShapes.add( square );
+            shapeCollector.addFigure( square );
         }
 
         //Then
-        Assert.assertEquals( square, shapeCollector.getFigure( 5 ) );
+        Assert.assertEquals( square, shapeCollector.getFigure( 1 ) );
     }
 
 }
