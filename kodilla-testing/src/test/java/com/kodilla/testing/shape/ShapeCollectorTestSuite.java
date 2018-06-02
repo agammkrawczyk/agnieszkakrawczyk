@@ -40,9 +40,9 @@ public class ShapeCollectorTestSuite {
         Square square = new Square( 5.0 );
 
         //When
-        for (int i = 0; i < 10; i++) {
-            shapeCollector.addFigure( square );
-        }
+         shapeCollector.addFigure( square );
+         shapeCollector.addFigure( square );
+
 
         //Then
         Assert.assertEquals( square, shapeCollector.getFigure( 1 ) );
