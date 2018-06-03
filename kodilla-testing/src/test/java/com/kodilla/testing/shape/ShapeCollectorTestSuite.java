@@ -8,7 +8,7 @@ import com.kodilla.testing.shape.*;
 public class ShapeCollectorTestSuite {
 
     @Test
-    public void testAddFigure(Shape  shape){
+    public void testAddFigure(){
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
         Circle circle = new Circle( 5.0 );
@@ -19,7 +19,7 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-    public void testRemoveFigure(Shape shape) {
+    public void testRemoveFigure() {
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
         Square square = new Square( 4.0 );
@@ -34,7 +34,7 @@ public class ShapeCollectorTestSuite {
 
     @Test
 
-    public void testGetFigure(int n) {
+    public void testGetFigure(){
         // Given
         ShapeCollector shapeCollector = new ShapeCollector();
         Square square = new Square( 5.0 );
