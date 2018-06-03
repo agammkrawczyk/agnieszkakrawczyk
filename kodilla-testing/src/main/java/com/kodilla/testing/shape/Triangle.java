@@ -10,12 +10,11 @@ public class Triangle implements Shape {
     }
 
     public String getShapeName(){
-        return null;
-        // return null temporrary
-    };
+        return "Triangle";
+
+    }
 
     public double getField(){
-        return 10;
-        // return 10 temporrary
-    };
+        return 0.5*height*lenght;
+    }
 }

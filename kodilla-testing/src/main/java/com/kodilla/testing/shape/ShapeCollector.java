@@ -10,16 +10,16 @@ private ArrayList<Shape> listOfShapes = new ArrayList<Shape>();
         return listOfShapes.size();
     }
     public void addFigure(Shape shape){
-        // do nothing
+        listOfShapes.add(shape);
     }
    public void removeFigure(Shape shape){
-        // do nothing
+       listOfShapes.remove(shape);
    }
    public Shape getFigure(int n){
-       return null;
+       return listOfShapes.get(n);
    }
    public void showFigures(){
-       //do nothing
+       System.out.println(listOfShapes);
    }
 
 

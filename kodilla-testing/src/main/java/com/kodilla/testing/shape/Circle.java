@@ -8,13 +8,13 @@ public class Circle implements Shape{
     }
 
     public String getShapeName(){
-        return null;
-        // return null temporrar;
-    };
+        return "circle";
+
+    }
 
     public double getField(){
-        return 10;
-        // return 10 temporary
-    };
+        return  3.14*radius*radius;
+
+    }
 
 }

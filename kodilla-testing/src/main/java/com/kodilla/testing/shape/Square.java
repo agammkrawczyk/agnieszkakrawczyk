@@ -8,13 +8,11 @@ public class Square implements Shape{
     }
 
     public String getShapeName(){
-        return null;
-        // return nulll temporary
-    };
+        return " Square";
+    }
 
      public double getField(){
-         return 10;
-         //return 10 temporrary
-     };
+         return lenghtA*lenghtA;
+     }
 
 }
