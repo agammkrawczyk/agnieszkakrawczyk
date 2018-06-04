@@ -11,9 +11,7 @@ public class TestingMain {
 
         if (result.equals("theForumUser")){
             System.out.println("test OK");
-        } else {
-            System.out.println("Error!");
-        }
+        } else System.out.println( "Error!" );
 
 
         // testing caclulator

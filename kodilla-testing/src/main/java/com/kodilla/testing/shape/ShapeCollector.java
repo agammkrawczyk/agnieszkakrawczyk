@@ -15,8 +15,15 @@ private ArrayList<Shape> listOfShapes = new ArrayList<Shape>();
    public void removeFigure(Shape shape){
        listOfShapes.remove(shape);
    }
-   public Shape getFigure(int n){
-       return listOfShapes.get(n);
+   public Shape getFigure(int n) {
+
+       if ((n > listOfShapes.size())&& (n<0)) {
+           return null;
+       }
+
+        else {
+           return listOfShapes.get( n );
+       }
    }
    public void showFigures(){
        System.out.println(listOfShapes);
