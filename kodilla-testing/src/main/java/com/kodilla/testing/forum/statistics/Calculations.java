@@ -10,9 +10,9 @@ public class Calculations  {
 
 
    public void calculateAdvStatistics(Statistics statistics) {
-       userQuanitity = statistics.usersNames().size();
-       postsQuanitity = statistics.postsCount();
-       commentsQuanitity = statistics.commentsCount();
+       private userQuanitity = statistics.usersNames().size();
+       private postsQuanitity = statistics.postsCount();
+       private commentsQuanitity = statistics.commentsCount();
        if (userQuanitity > 0) {
            averagePostsOfUsers = postsQuanitity / userQuanitity;
        } else {
@@ -30,4 +30,27 @@ public class Calculations  {
        }
    }
 
+    public int getUserQuanitity() {
+        return userQuanitity;
+    }
+
+    public int getPostsQuanitity() {
+        return postsQuanitity;
+    }
+
+    public int getCommentsQuanitity() {
+        return commentsQuanitity;
+    }
+
+    public double getAveragePostsOfUsers() {
+        return averagePostsOfUsers;
+    }
+
+    public double getAverageCommmentsOfUsers() {
+        return averageCommmentsOfUsers;
+    }
+
+    public double getAverageCommmentsOfPosts() {
+        return averageCommmentsOfPosts;
+    }
 }
