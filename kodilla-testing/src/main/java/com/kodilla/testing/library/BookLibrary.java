@@ -23,7 +23,7 @@ public class BookLibrary {
 
     // list books borrowed by libraryUser
        public List<Book>listBooksInHandsOf(LibraryUser libraryUser){
-           List<Book> bookList= new ArrayList<Book>();
+           List<Book> bookList;
            bookList=libraryDatabase.listBooksInHandsOf( libraryUser );
 
            return bookList;

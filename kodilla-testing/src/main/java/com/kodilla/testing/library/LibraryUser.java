@@ -7,7 +7,7 @@ String firstname;
 String lastname;
 String peselID;
 
-
+    LibraryDatabase libraryDatabase;
     public LibraryUser(String firstname, String lastname, String peselID) {
         this.firstname = firstname;
         this.lastname = lastname;
