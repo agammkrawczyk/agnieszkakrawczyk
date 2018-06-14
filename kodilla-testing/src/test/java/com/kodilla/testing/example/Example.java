@@ -62,6 +62,7 @@ public class Example {
         Assert.assertEquals(expected, result);
     }
 
+
     @Test
     public void testMax() {
         //given

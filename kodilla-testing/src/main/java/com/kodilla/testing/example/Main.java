@@ -38,13 +38,14 @@ public class Main {
         for (String count : strings) {
             if (count.length() > 0) {
                 newList.add( count );
-                result = String.join( ",", newList );
+
             }
         }
+        result = String.join( ",", newList );
         return result;
     }
 
-    public static List<Integer> getSquares(List<Integer> numbers) {
+    public static List<Integer> getSquaresNew(List<Integer> numbers) {
         List<Integer> squaresList = new ArrayList<>();
         Set<Integer> duplicated = new HashSet<Integer>();
 
@@ -58,8 +59,22 @@ public class Main {
             squaresList.add( n * n );
         }
         return squaresList;
+    }
 
+    public static List<Integer> getSquares(List<Integer> numbers){
+        List<Integer> squares = new ArrayList<>(  );
+        Iterator<Integer> itr1 = numbers.listIterator();
+        List<Integer> finish= new ArrayList<>(  );
 
+        while (itr1.hasNext()) {
+            Integer itn1 =  itr1.next();
+            if (!squares.contains( itn1 ))
+                squares.add(itn1);
+        }
+        for( Integer x:squares ){
+            finish.add( x*x );
+        }
+    return finish;
     }
 
     public static Integer getMax(List<Integer> numbers) {
@@ -92,7 +107,6 @@ public class Main {
         }
 
         average = sum / numbers.size();
-
 
         return average;
 
