@@ -24,12 +24,8 @@ public class BookLibrary {
     // list books borrowed by libraryUser
        public List<Book>listBooksInHandsOf(LibraryUser libraryUser){
            List<Book> bookList= new ArrayList<Book>();
-           Book book = new Book("The book title", "The book author", 2000);
-           bookList.add(book);
+           bookList=libraryDatabase.listBooksInHandsOf( libraryUser );
 
-           // temporary returning list of one book
            return bookList;
-
-
     }
 }
