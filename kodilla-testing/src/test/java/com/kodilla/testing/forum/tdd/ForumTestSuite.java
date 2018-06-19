@@ -1,5 +1,5 @@
 package com.kodilla.testing.forum.tdd;
-import org.assertj.core.api.Assert;
+
 
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -8,7 +8,7 @@ import org.junit.Test;
 import com.kodilla.testing.forum.ForumUser;
 import com.kodilla.testing.forum.*;
 
-import static org.assertj.core.api.Assert.*;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

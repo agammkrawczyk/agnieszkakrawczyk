@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.testing.example.Example" tests="9" skipped="0" failures="0" errors="0" timestamp="2018-06-18T08:34:31" hostname="Agniecha1" time="0.043">
+  <properties/>
+  <testcase name="testMax" classname="com.kodilla.testing.example.Example" time="0.005"/>
+  <testcase name="testMin" classname="com.kodilla.testing.example.Example" time="0.0"/>
+  <testcase name="testSum" classname="com.kodilla.testing.example.Example" time="0.0"/>
+  <testcase name="testAverage" classname="com.kodilla.testing.example.Example" time="0.0"/>
+  <testcase name="testCountLength3UsingJava7" classname="com.kodilla.testing.example.Example" time="0.0"/>
+  <testcase name="testCountEmptyStringUsingJava7" classname="com.kodilla.testing.example.Example" time="0.001"/>
+  <testcase name="testDeleteEmptyStringsUsingJava7" classname="com.kodilla.testing.example.Example" time="0.0"/>
+  <testcase name="testMergedStringUsingJava7" classname="com.kodilla.testing.example.Example" time="0.024"/>
+  <testcase name="testSquares" classname="com.kodilla.testing.example.Example" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
