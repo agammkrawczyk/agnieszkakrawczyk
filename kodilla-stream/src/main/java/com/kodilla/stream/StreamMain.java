@@ -1,4 +1,5 @@
 package com.kodilla.stream;
+import com.kodilla.stream.iterate.NumbersGenerator;
 import com.kodilla.stream.lambada.ExpressionExecutor;
 import com.kodilla.stream.reference.FunctionalCalculator;
 
@@ -15,5 +16,9 @@ public class StreamMain {
        expressionExecutor.executeExpresion( 3,4,FunctionalCalculator::addAToB );
        expressionExecutor.executeExpresion( 3,4,FunctionalCalculator::subBFromA );
        expressionExecutor.executeExpresion( 3,4,FunctionalCalculator::divideAByB );
-    }
+
+
+    System.out.println("Using Stream to generate even numebrs from 1 to 20");
+    NumbersGenerator.generateEven(20);
 }
+ }
