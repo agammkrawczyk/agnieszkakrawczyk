@@ -75,6 +75,12 @@ public final class ForumUser {
                 .map( ForumUser::getLocation )
                 .collect( Collectors.toSet() );
     }
+
+
+
+
+
+
 }
 
 
