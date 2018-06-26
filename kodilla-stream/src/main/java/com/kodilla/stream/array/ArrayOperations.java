@@ -11,10 +11,22 @@ public interface ArrayOperations {
      double theAverage = IntStream.range(0, numbers.length)
              .map(n -> numbers[n])
              .average()
-             .getAsDouble();;
+             .getAsDouble();
      return theAverage;
-  };
+  }
 
+
+   static int getSum(int[]numbers) {
+      IntStream.range( 0, numbers.length )
+              .map( n -> numbers[n] )
+              .forEach( System.out::println );
+      int theSum = IntStream.range( 0, numbers.length )
+              .map( n -> numbers[n] )
+              .sum();
+      return theSum;
+   }
 
 
 }
+
+
