@@ -39,7 +39,7 @@ public class peopleWorldTest {
         Country Paragwaj = new Country("Paragwaj", new BigDecimal("6943739"));
         Country Peru= new Country(  "Peru",new BigDecimal ("33036196"));
         Country Surinam= new Country(  "Surinam",new BigDecimal ("591919"));
-        Country Wnezuela= new Country( "Wnezuela", new BigDecimal("31431000"));
+        Country Wnezuela= new Country( "Wenezuela", new BigDecimal("31431000"));
         Country Urugwaj= new Country( "Urugwaj",new BigDecimal ("3360148") );
         Country TrynidadITobago= new Country("Trynidad i Tobago",new BigDecimal ("1218208") );
 

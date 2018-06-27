@@ -3,11 +3,10 @@ package com.kodilla.testing.library;
 import java.util.Objects;
 
 public class LibraryUser {
-String firstname;
-String lastname;
-String peselID;
+ private String firstname;
+ private String lastname;
+ private  String peselID;
 
-    LibraryDatabase libraryDatabase;
     public LibraryUser(String firstname, String lastname, String peselID) {
         this.firstname = firstname;
         this.lastname = lastname;
