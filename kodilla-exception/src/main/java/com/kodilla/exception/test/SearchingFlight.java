@@ -12,20 +12,21 @@ public class SearchingFlight {
         airports.put( "Poznań", true );
         airports.put( "Białystok", false );
 
-        boolean readyArrivalAiport= false;
-        boolean readyDestinationAiport= false;
+        boolean readyArrivalAiport= airports.get( flight.getDepartureAirport());
+        boolean readyDestinationAiport= airports.get(flight.getArrivalAirport());
 
         if (!airports.containsKey( flight.getArrivalAirport() ) || (!airports.containsKey( flight.getDepartureAirport() ))){
 
         throw new RouteNotFoundException();
         }
 
-       if (  readyDestinationAiport =airports.get( flight.getDepartureAirport() ) ||( readyArrivalAiport=airports.get(flight.getArrivalAirport()))){
+       if (  readyDestinationAiport == false|| readyArrivalAiport== false ){
 
 
-           System.out.println( "The aiport is not ready" );
+            System.out.println( "The aiport is not ready" );
+        }
 
-       } else { System.out.println("Destination is possible");
+        else { System.out.println("Destination is possible");
         }
 
     }
