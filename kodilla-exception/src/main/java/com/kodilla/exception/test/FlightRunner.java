@@ -3,7 +3,7 @@ package com.kodilla.exception.test;
 public class FlightRunner {
     public static void main(String args[]) {
 
-        Flight flight = new Flight("Warszawa", "New York");
+        Flight flight = new Flight("Warszawa", "Białystok");
         SearchingFlight searchingFlight= new SearchingFlight();
 
         try {

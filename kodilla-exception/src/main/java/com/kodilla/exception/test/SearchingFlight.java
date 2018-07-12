@@ -12,13 +12,15 @@ public class SearchingFlight {
         airports.put( "Poznań", true );
         airports.put( "Białystok", false );
 
-
         if (!airports.containsKey( flight.getArrivalAirport() ) || (!airports.containsKey( flight.getDepartureAirport() ))){
-            ;
+
         throw new RouteNotFoundException();
         }
-        else{
-            System.out.println("Destination is possible");
+
+       if ( airports.containsValue( false )) {
+           System.out.println( "The aiport is not ready" );
+
+       }else { System.out.println("Destination is possible");
         }
 
     }
