@@ -10,7 +10,7 @@ public class GlutenFreeShop implements OrderService {
     public String  getProviderLocation(){return "Piaseczno";};
 
     @Override
-    public boolean process(Food food) {System.out.println( "Welcome in GlutenFreeShop" );
+    public boolean process(ProviderID providerID,int price) {System.out.println( "Welcome in GlutenFreeShop" );
         return true;
     }
 

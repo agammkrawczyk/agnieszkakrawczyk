@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface OrderService {
 
-       boolean process(Food food);
+       boolean process(ProviderID providerID, int price);
        List<Food>getFoodList();
        void orderListForClient();
 

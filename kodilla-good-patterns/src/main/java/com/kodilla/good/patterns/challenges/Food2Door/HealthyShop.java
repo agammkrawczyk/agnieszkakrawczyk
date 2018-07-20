@@ -10,7 +10,7 @@ public class HealthyShop implements OrderService{
     public String  getProviderLocation(){return "Radom";};
 
     @Override
-    public boolean process(Food food) {
+    public boolean process(ProviderID providerID,int price) {
         System.out.println(" Welcome in HealthyShop");
         return true;
     }
@@ -22,11 +22,12 @@ public class HealthyShop implements OrderService{
         healthyshopFoodList.add( new Food( "apple",1 ) );
         return healthyshopFoodList;
     }
+
     public void orderListForClient() {
-  HealthyShop healthyShop= new HealthyShop();
-    String healthyFood = healthyShop.getFoodList().stream()
-            .map( Food::getFoodName )
-            .collect( Collectors.joining( " helthy" , " helthy ","") );
+        HealthyShop healthyShop = new HealthyShop();
+        String healthyFood = healthyShop.getFoodList().stream()
+                .map( Food::getFoodName )
+                .collect( Collectors.joining( " helthy", " helthy ", "" ) );
 
 
         System.out.println("Your order in Helathy Shop. Only healthy products.. : "+ healthyFood);
