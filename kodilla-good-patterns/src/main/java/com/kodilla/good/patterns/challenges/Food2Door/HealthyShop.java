@@ -11,7 +11,7 @@ public class HealthyShop implements OrderService{
     public String  getProviderLocation(){return "Radom";};
 
     @Override
-    public boolean process(ProviderID providerID,int price) {
+    public boolean process(String providerID, int price) {
         System.out.println(" Welcome in HealthyShop");
         return true;
     }

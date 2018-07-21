@@ -18,19 +18,26 @@ public class FoodProcessor {
     public Dto process(final Order order){
         boolean isOrderedSth=orderService.process( order.getProviderName(),order.getPrice() );
         if (isOrderedSth){
-           HealthyShop healthyShop= new HealthyShop();
-           GlutenFreeShop glutenFreeShop= new GlutenFreeShop();
-           ExtraFoodShop extraFoodShop= new ExtraFoodShop();
+            Map<String, OrderService> selectProvider = new HashMap<String, OrderService>();
 
-            Map<String,List<Food>>selectProvider= new HashMap(  );
-            selectProvider.put( "HealthhyShop",healthyShop.getFoodList());
-            selectProvider.put( "GlutenFreeShop",glutenFreeShop.getFoodList());
-            selectProvider.put( "ExtraFoodShop" ,extraFoodShop.getFoodList());
+            selectProvider.put( "carrot", new GlutenFreeShop() );
+            selectProvider.put( "apple", new ExtraFoodShop() );
+            selectProvider.put( "orange", new GlutenFreeShop() );
+
+            if (selectProvider.containsKey( order.getFood() ))
+
+            {
+                System.out.println( "Welcome in our shoping center. Your order is in " + order.getProviderName() );
+            } else
+
+            {
+                System.out.println( "Ups... sorry... Please contatct with our  hotline for special order" );
+            }
 
             return new Dto( order.getProviderName(),true );}
 
             else {
-            return  new Dto( order.getProviderID(),false );
+            return  new Dto( order.getProviderName(),false );
         }
 
 

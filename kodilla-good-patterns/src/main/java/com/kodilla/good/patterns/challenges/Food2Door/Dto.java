@@ -1,20 +1,18 @@
 package com.kodilla.good.patterns.challenges.Food2Door;
 
-import java.util.List;
-
 public class Dto {
 
-    private ProviderID providerID;
+    private String providerID;
     private boolean isOrder;
 
-    public Dto( ProviderID providerID, boolean isOrder) {
+    public Dto(String providerID, boolean isOrder) {
 
         this.providerID = providerID;
         this.isOrder = isOrder;
     }
 
 
-    public ProviderID getProviderID() {
+    public String getProviderID() {
         return providerID;
     }
 

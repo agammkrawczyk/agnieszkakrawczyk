@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 public class ExtraFoodShop implements OrderService {
 
 
-    public boolean process(ProviderID providerID,int price) {
+    public boolean process(String providerID, int price) {
         System.out.println( "Welcome in ExtraFoodShop" );
         return true;
     }
