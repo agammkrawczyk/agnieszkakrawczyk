@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 public class HealthyShop implements OrderService{
 
+
     public String getProviderName() {return "HealthyShop";};
     public String  getProviderLocation(){return "Radom";};
 
@@ -17,6 +18,7 @@ public class HealthyShop implements OrderService{
 
     @Override
     public List<Food> getFoodList() {
+        HealthyShop healthyShop= new HealthyShop();
         List<Food>healthyshopFoodList= new ArrayList<>(  );
         healthyshopFoodList.add(new Food( "carrot",1 )) ;
         healthyshopFoodList.add( new Food( "apple",1 ) );

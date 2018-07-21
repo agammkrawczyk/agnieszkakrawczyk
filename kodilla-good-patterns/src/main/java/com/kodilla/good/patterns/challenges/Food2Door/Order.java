@@ -1,21 +1,28 @@
 package com.kodilla.good.patterns.challenges.Food2Door;
 
+import java.util.List;
+
 public class Order {
-    private ProviderID providerID;
-    private Food food;
+    private String providerName;
+    private String food;
+    private List<Food> FoodList;
     private int price;
 
-    public Order(ProviderID providerID, Food food, int price) {
-        this.providerID = providerID;
+    public Order( String providerName, String food, int price) {
+        this.providerName = providerName;
         this.food = food;
         this.price = price;
     }
 
-    public ProviderID getProviderID() {
-        return providerID;
+    public List<Food> getFoodList() {
+        return FoodList;
     }
 
-    public Food getFood() {
+    public String getProviderName() {
+        return providerName;
+    }
+
+    public String getFood() {
         return food;
     }
 
