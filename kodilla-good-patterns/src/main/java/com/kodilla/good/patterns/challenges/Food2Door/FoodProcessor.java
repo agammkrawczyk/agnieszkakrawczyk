@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 public class FoodProcessor {
-    private  OrderService orderService;
+    private OrderService orderService;
 
     public FoodProcessor(final OrderService orderService) {
         this.orderService = orderService;
@@ -15,9 +15,9 @@ public class FoodProcessor {
 
     }
 
-    public Dto process(final Order order){
-        boolean isOrderedSth=orderService.process( order.getProviderName(),order.getPrice() );
-        if (isOrderedSth){
+    public Dto process(final Order order) {
+        boolean isOrderedSth = orderService.process( order.getProviderName(), order.getPrice() );
+        if (isOrderedSth) {
             Map<String, OrderService> selectProvider = new HashMap<String, OrderService>();
 
             selectProvider.put( "carrot", new GlutenFreeShop() );
@@ -28,17 +28,25 @@ public class FoodProcessor {
 
             {
                 System.out.println( "Welcome in our shoping center. Your order is in " + order.getProviderName() );
-            } else
+
+
+                orderService.orderListForClient();
+                orderService.process( order.getProviderName(), order.getPrice() );
+                System.out.println( "The price is" + order.getPrice() + " Thank you" );
+
+
+                return new Dto( order.getProviderName(), true );
+            }
+            else
 
             {
                 System.out.println( "Ups... sorry... Please contatct with our  hotline for special order" );
+
+
             }
-
-            return new Dto( order.getProviderName(),true );}
-
-            else {
-            return  new Dto( order.getProviderName(),false );
         }
+
+        return new Dto( order.getProviderName(), false );
 
 
     }
