@@ -1,7 +1,7 @@
 package com.kodilla.good.patterns.challenges.Food2Door;
 
+
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class FoodProcessor {
@@ -11,13 +11,13 @@ public class FoodProcessor {
         this.orderService = orderService;
     }
 
-    public FoodProcessor() {
-
-    }
 
     public Dto process(final Order order) {
-        boolean isOrderedSth = orderService.process( order.getProviderName(), order.getPrice() );
+        boolean isOrderedSth = orderService.process( order.getFood(), order.getPrice() );
         if (isOrderedSth) {
+
+            System.out.println( "Welcome in our shoping center. ");
+
             Map<String, OrderService> selectProvider = new HashMap<String, OrderService>();
 
             selectProvider.put( "carrot", new GlutenFreeShop() );
@@ -26,27 +26,23 @@ public class FoodProcessor {
 
             if (selectProvider.containsKey( order.getFood() ))
 
-            {
-                System.out.println( "Welcome in our shoping center. Your order is in " + order.getProviderName() );
+            orderService.process( order.getFood(), order.getPrice() );
+            System.out.println( "The price is" + order.getPrice() + " Thank you" );
+
+            System.out.println( "Your order was procesing by  " +selectProvider.get( order.getFood() ));
+            System.out.println( "In this shop you can buy also" );
+            orderService.orderListForClient();
 
 
-                orderService.orderListForClient();
-                orderService.process( order.getProviderName(), order.getPrice() );
-                System.out.println( "The price is" + order.getPrice() + " Thank you" );
+            return new Dto( order.getFood(), true );
+        } else
 
+        {
+            System.out.println( "Ups... sorry... Please contatct with our  hotline for special order" );
 
-                return new Dto( order.getProviderName(), true );
-            }
-            else
-
-            {
-                System.out.println( "Ups... sorry... Please contatct with our  hotline for special order" );
-
-
-            }
         }
 
-        return new Dto( order.getProviderName(), false );
+        return new Dto( order.getFood(), false );
 
 
     }
