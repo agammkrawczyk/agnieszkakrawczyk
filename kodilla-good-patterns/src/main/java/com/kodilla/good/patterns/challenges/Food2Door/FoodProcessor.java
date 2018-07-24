@@ -5,32 +5,41 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FoodProcessor {
-    private OrderService orderService;
 
-    public FoodProcessor(final OrderService orderService) {
-        this.orderService = orderService;
+
+    private static Map<String, OrderService> selectProvider = new HashMap<String, OrderService>();
+
+    static {
+
+        selectProvider.putAll( ExtraFoodShop.getFoodOrder() );
+        selectProvider.putAll( HealthyShop.getFoodOrder() );
+        selectProvider.putAll( GlutenFreeShop.getFoodOrder() );
     }
 
 
-    public Dto process(final Order order) {
+    public Dto process(final Order order) throws ProcessingException {
+
+        OrderService orderService = null;
+
+        if (selectProvider.containsKey( order.getFood() )) {
+            orderService = selectProvider.get( order.getFood() );
+
+        } else {
+            throw new ProcessingException();
+        }
         boolean isOrderedSth = orderService.process( order.getFood(), order.getPrice() );
         if (isOrderedSth) {
 
-            System.out.println( "Welcome in our shoping center. ");
+            System.out.println( "Welcome in our shoping center. " );
 
-            Map<String, OrderService> selectProvider = new HashMap<String, OrderService>();
-
-            selectProvider.put( "carrot", new GlutenFreeShop() );
-            selectProvider.put( "apple", new ExtraFoodShop() );
-            selectProvider.put( "orange", new GlutenFreeShop() );
-
-            if (selectProvider.containsKey( order.getFood() ))
 
             orderService.process( order.getFood(), order.getPrice() );
             System.out.println( "The price is" + order.getPrice() + " Thank you" );
 
-            System.out.println( "Your order was procesing by  " +selectProvider.get( order.getFood() ));
-            System.out.println( "In this shop you can buy also" );
+            System.out.println( "Your order was procesing by  " + selectProvider.get( order.getFood() ) );
+
+
+            System.out.print( "In this shop you can buy also " );
             orderService.orderListForClient();
 
 
