@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 
 public class HealthyShop implements OrderService{
     private static List<Food>healthyshopFoodList= new ArrayList<>(  );
+
     static {
         healthyshopFoodList.add(new Food( "carrot",1 )) ;
         healthyshopFoodList.add( new Food( "apple",1 ) );
