@@ -4,9 +4,10 @@ import java.util.*;
 
 public class Board {
 
+
     public static Map<Integer, Destination> getAllFlights() {
 
-     Map<Integer,Destination> allFlights = new HashMap<>();
+         Map<Integer,Destination> allFlights = new HashMap<>();
 
         allFlights .put ( 1, new Destination( "Olsztyn", Optional.empty(), "Warszawa" ) );
         allFlights .put ( 2, new Destination( "Olsztyn", Optional.ofNullable( "Poznań" ), "Warszawa" ) );
@@ -15,7 +16,7 @@ public class Board {
         allFlights .put ( 5, new Destination( "Warszawa", Optional.empty(), "Radom" ) );
 
 
-        return allFlights;
 
+        return allFlights;
     }
 }

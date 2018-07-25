@@ -9,18 +9,16 @@ import static com.kodilla.good.patterns.challenges.Flights.Board.getAllFlights;
 public class Application {
     public static void main(String args[]) {
 
-        String departureAirport = "Warszawa";
-        Optional<String> transferAirport = Optional.ofNullable("Olsztyn");
-        String arrivalAirport = "Gdańsk";
 
-        Destination destination= new Destination( departureAirport,transferAirport,arrivalAirport );
+        Destination destination= new Destination( "Warszawa",Optional.ofNullable("Olsztyn"),"Gdańśk");
+
+
         FindFlight findFlight = new FindFlight();
 
-        Board board = new Board();
 
-        Map<Integer, Destination>allFlights= getAllFlights();
-        findFlight.findFlightFromAirport( departureAirport,allFlights );
-        findFlight.findFlightToAirport( arrivalAirport,allFlights );
-        findFlight.findFlightWithTransferAirport( transferAirport,allFlights );
+        Map<Integer, Destination>allFlights= Board.getAllFlights();
+        findFlight.findFlightFromAirport( destination.getDepartureAirport());
+        findFlight.findFlightToAirport(  destination.getArrivalAirport());
+        findFlight.findFlightWithTransferAirport(  destination.getTransferAirport());
 }
 }
