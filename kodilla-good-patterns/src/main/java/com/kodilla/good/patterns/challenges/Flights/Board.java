@@ -4,19 +4,24 @@ import java.util.*;
 
 public class Board {
 
+    public static Map<NumberFlight, Destination> getAllFlights() {
 
-    public static Map<Integer, Destination> getAllFlights() {
 
-         Map<Integer,Destination> allFlights = new HashMap<>();
+        Map<NumberFlight,Destination> allFlights = new HashMap<>();
 
-        allFlights .put ( 1, new Destination( "Olsztyn", Optional.empty(), "Warszawa" ) );
-        allFlights .put ( 2, new Destination( "Olsztyn", Optional.ofNullable( "Poznań" ), "Warszawa" ) );
-        allFlights .put ( 3, new Destination( "Warszawa", Optional.ofNullable( "Poznan" ), "Gdańsk" ) );
-        allFlights .put ( 4, new Destination( "Kraków", Optional.ofNullable( "Olsztyn" ), "Gdynia" ) );
-        allFlights .put ( 5, new Destination( "Warszawa", Optional.empty(), "Radom" ) );
 
+        allFlights.put( new NumberFlight( 1 ), new Destination( "Olsztyn", "Kraków" ) );
+        allFlights.put( new NumberFlight( 2 ), new Destination( "Olsztyn", "Warszawa" ) );
+        allFlights.put( new NumberFlight( 3 ), new Destination( "Warszawa", "Gdańsk" ) );
+        allFlights.put( new NumberFlight( 4 ), new Destination( "Kraków", "Gdynia" ) );
+        allFlights.put( new NumberFlight( 5 ), new Destination( "Warszawa", "Radom" ) );
 
 
         return allFlights;
     }
-}
+
+
+    }
+
+
+

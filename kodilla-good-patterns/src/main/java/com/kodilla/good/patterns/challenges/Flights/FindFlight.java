@@ -1,38 +1,33 @@
 package com.kodilla.good.patterns.challenges.Flights;
-import com.kodilla.good.patterns.challenges.Flights.Board;
+
 
 import java.util.Map;
-import java.util.Optional;
-import java.util.stream.Collectors;
+import java.util.stream.Collector;
 
 public class FindFlight {
 
 
-    public void findFlightFromAirport(String departureAirport) {
+        public String findFlightFromAirport (String departureAirport) {
+
+            System.out.println( "Flights from departure Airport - " + departureAirport );
+        FindFlight findFlight= new FindFlight();
+
+        String findFlightShow= Board.getAllFlights().entrySet().stream()
+                    .filter( entry -> entry.getValue().equals( departureAirport ) )
+                    .sorted().toString();
+
+        return findFlightShow;
+        }
 
 
-        System.out.println("Flights from departure Airport - "+ departureAirport);
+        public void findFlightToAirport (String arrivalAirport){
 
-       Board.getAllFlights().entrySet().stream()
-                .filter( entry -> entry.getValue().equals( Board.getAllFlights().get( departureAirport ) ) )
-                .forEach( System.out::println );
+            System.out.println( " Flights to arrivalAirport " + arrivalAirport );
+            Board.getAllFlights().entrySet().stream()
+                    .filter( entry -> entry.getValue().equals( arrivalAirport ) )
+                    .forEach( s->System.out.println( s ) );
 
-    }
 
-    public void findFlightToAirport(String arrivalAirport) {
-
-        System.out.println( " Flights to arrivalAiport " + arrivalAirport );
-        Board.getAllFlights().entrySet().stream()
-                .filter( entry -> entry.getValue().getDepartureAirport().equals( arrivalAirport ) )
-                .forEach( System.out::println );
-    }
-
-    public void findFlightWithTransferAirport(Optional<String> transferAirport) {
-
-        System.out.println( "Flights through transferAirport " +transferAirport);
-        Board.getAllFlights().entrySet().stream()
-                .filter( entry -> (entry.getValue().equals(transferAirport) ) )
-                .forEach( System.out::println );
     }
 
 }
