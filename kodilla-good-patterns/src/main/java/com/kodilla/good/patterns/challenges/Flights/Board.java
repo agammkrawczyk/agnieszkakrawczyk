@@ -2,26 +2,32 @@ package com.kodilla.good.patterns.challenges.Flights;
 
 import java.util.*;
 
-public class Board {
-
-    public static Map<NumberFlight, Destination> getAllFlights() {
+public final class Board {
 
 
-        Map<NumberFlight,Destination> allFlights = new HashMap<>();
+    public static Set<Destination> getAllFlights() {
 
 
-        allFlights.put( new NumberFlight( 1 ), new Destination( "Olsztyn", "Kraków" ) );
-        allFlights.put( new NumberFlight( 2 ), new Destination( "Olsztyn", "Warszawa" ) );
-        allFlights.put( new NumberFlight( 3 ), new Destination( "Warszawa", "Gdańsk" ) );
-        allFlights.put( new NumberFlight( 4 ), new Destination( "Kraków", "Gdynia" ) );
-        allFlights.put( new NumberFlight( 5 ), new Destination( "Warszawa", "Radom" ) );
+        Set<Destination> allFlights = new HashSet<>();
 
+
+        allFlights.add( new Destination( "Olsztyn", "Kraków" ) );
+        allFlights.add( new Destination( "Kraków", "Warszawa" ) );
+        allFlights.add( new Destination( "Warszawa", "Gdańsk" ) );
+        allFlights.add( new Destination( "Kraków", "Gdynia" ) );
+        allFlights.add( new Destination( "Warszawa", "Radom" ) );
+        allFlights.add( new Destination( "Warszawa", "Praga" ) );
+        allFlights.add( new Destination( "Olsztyn", "Lublin" ) );
+        allFlights.add( new Destination( "Olsztyn", "Katowice" ) );
+        allFlights.add( new Destination( "Katowice", "Warszawa" ) );
+        allFlights.add( new Destination( "Kraków","Radom" ) );
+        allFlights.add( new Destination( "Katowice","Radom" ) );
 
         return allFlights;
     }
 
 
-    }
+}
 
 
 

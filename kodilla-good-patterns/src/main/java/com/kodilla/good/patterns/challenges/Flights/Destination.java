@@ -3,7 +3,7 @@ package com.kodilla.good.patterns.challenges.Flights;
 import java.util.Objects;
 
 
-public class Destination {
+public final class Destination {
     private final String departureAirport;
 
     private final String arrivalAirport;

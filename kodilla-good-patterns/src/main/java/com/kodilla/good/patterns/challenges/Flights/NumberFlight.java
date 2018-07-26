@@ -1,6 +1,6 @@
 package com.kodilla.good.patterns.challenges.Flights;
 
-public class NumberFlight {
+public final  class NumberFlight {
     private Integer flightID;
 
     public NumberFlight(Integer flightID) {
