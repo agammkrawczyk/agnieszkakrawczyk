@@ -1,6 +1,5 @@
 package com.kodilla.good.patterns.challenges.Flights;
 
-import java.util.Map;
 
 
 public class Application {
