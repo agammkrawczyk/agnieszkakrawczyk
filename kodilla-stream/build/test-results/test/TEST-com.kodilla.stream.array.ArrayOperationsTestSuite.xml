@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.stream.array.ArrayOperationsTestSuite" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-07-29T20:23:10" hostname="Agniecha1" time="0.376">
+  <properties/>
+  <testcase name="testGetAverage2" classname="com.kodilla.stream.array.ArrayOperationsTestSuite" time="0.294"/>
+  <testcase name="testGetAverage" classname="com.kodilla.stream.array.ArrayOperationsTestSuite" time="0.014"/>
+  <testcase name="testGetSum" classname="com.kodilla.stream.array.ArrayOperationsTestSuite" time="0.055"/>
+  <system-out><![CDATA[1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+10.5
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+1
+2
+3
+4
+5
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.testing.forum.statistics.CalculationsTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2018-06-18T08:34:31" hostname="Agniecha1" time="1.083">
+<testsuite name="com.kodilla.testing.forum.statistics.CalculationsTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2018-07-29T20:23:30" hostname="Agniecha1" time="1.411">
   <properties/>
-  <testcase name="testCalculateAverageCaseCommentsNull" classname="com.kodilla.testing.forum.statistics.CalculationsTest" time="1.027"/>
-  <testcase name="testCalculateAverageCaseThusendPosts" classname="com.kodilla.testing.forum.statistics.CalculationsTest" time="0.002"/>
-  <testcase name="testCalculateAverageCaseUesrPostsCommentsTheSameValue" classname="com.kodilla.testing.forum.statistics.CalculationsTest" time="0.009"/>
-  <testcase name="testCalculateAverageCaseLessPostsThanComments" classname="com.kodilla.testing.forum.statistics.CalculationsTest" time="0.004"/>
-  <testcase name="testCalculateAverageCaseHundredUsers" classname="com.kodilla.testing.forum.statistics.CalculationsTest" time="0.002"/>
-  <testcase name="testCalculateAverageCasemorePostsThanComments" classname="com.kodilla.testing.forum.statistics.CalculationsTest" time="0.003"/>
-  <testcase name="testCalculateAverageCaseNullPosts" classname="com.kodilla.testing.forum.statistics.CalculationsTest" time="0.004"/>
-  <testcase name="testCalculateAverageCaseNullUsers" classname="com.kodilla.testing.forum.statistics.CalculationsTest" time="0.014"/>
+  <testcase name="testCalculateAverageCaseCommentsNull" classname="com.kodilla.testing.forum.statistics.CalculationsTest" time="1.341"/>
+  <testcase name="testCalculateAverageCaseThusendPosts" classname="com.kodilla.testing.forum.statistics.CalculationsTest" time="0.003"/>
+  <testcase name="testCalculateAverageCaseUesrPostsCommentsTheSameValue" classname="com.kodilla.testing.forum.statistics.CalculationsTest" time="0.008"/>
+  <testcase name="testCalculateAverageCaseLessPostsThanComments" classname="com.kodilla.testing.forum.statistics.CalculationsTest" time="0.003"/>
+  <testcase name="testCalculateAverageCaseHundredUsers" classname="com.kodilla.testing.forum.statistics.CalculationsTest" time="0.003"/>
+  <testcase name="testCalculateAverageCasemorePostsThanComments" classname="com.kodilla.testing.forum.statistics.CalculationsTest" time="0.002"/>
+  <testcase name="testCalculateAverageCaseNullPosts" classname="com.kodilla.testing.forum.statistics.CalculationsTest" time="0.007"/>
+  <testcase name="testCalculateAverageCaseNullUsers" classname="com.kodilla.testing.forum.statistics.CalculationsTest" time="0.016"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
