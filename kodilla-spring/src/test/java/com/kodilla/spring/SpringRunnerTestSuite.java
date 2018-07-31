@@ -9,7 +9,7 @@ import com.kodilla.spring.shape.Shape;
 import com.kodilla.spring.shape.Triangle;
 
 import org.junit.Assert;
-import org.springframework.context.ApplicationContext;
+import org.apache.catalina.core.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
