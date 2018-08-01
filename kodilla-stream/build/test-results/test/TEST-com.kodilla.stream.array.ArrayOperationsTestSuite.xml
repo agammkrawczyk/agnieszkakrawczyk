@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.stream.array.ArrayOperationsTestSuite" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-07-29T20:23:10" hostname="Agniecha1" time="0.376">
+<testsuite name="com.kodilla.stream.array.ArrayOperationsTestSuite" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-07-31T18:46:44" hostname="Agniecha1" time="0.209">
   <properties/>
-  <testcase name="testGetAverage2" classname="com.kodilla.stream.array.ArrayOperationsTestSuite" time="0.294"/>
-  <testcase name="testGetAverage" classname="com.kodilla.stream.array.ArrayOperationsTestSuite" time="0.014"/>
-  <testcase name="testGetSum" classname="com.kodilla.stream.array.ArrayOperationsTestSuite" time="0.055"/>
+  <testcase name="testGetAverage2" classname="com.kodilla.stream.array.ArrayOperationsTestSuite" time="0.172"/>
+  <testcase name="testGetAverage" classname="com.kodilla.stream.array.ArrayOperationsTestSuite" time="0.002"/>
+  <testcase name="testGetSum" classname="com.kodilla.stream.array.ArrayOperationsTestSuite" time="0.02"/>
   <system-out><![CDATA[1
 2
 3
