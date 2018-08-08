@@ -6,17 +6,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public final class Library {
+public final class Library{
     private final List<String> books = new ArrayList<>();
+        private LibraryDbController libraryDbController;
 
-    @Autowired
-    private LibraryDbController libraryDbController;
+        public Library(final LibraryDbController libraryDbController) {
+            this.libraryDbController = libraryDbController;
+        }
 
-    public void saveToDb() {
-        libraryDbController.saveData();
-    }
+        public Library() {
+        }
 
-    public void loadFromDb() {
-        libraryDbController.loadData();
-    }
+        public void saveToDb() {
+            libraryDbController.saveData();
+        }
+
+        public void loadFromDb() {
+            libraryDbController.loadData();
+        }
 }
