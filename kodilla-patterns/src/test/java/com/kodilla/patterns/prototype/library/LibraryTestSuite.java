@@ -11,13 +11,20 @@ public class LibraryTestSuite {
  public void testGetBooks(){
      //Given
      //When
-     // Creating books
-     Library studentsLibrary= new Library( "Kodilla Library" );
-     IntStream.iterate(1, n -> n + 1)
-             .limit(5)
-             .forEach(n ->studentsLibrary.getBooks().add(new Book( " title","autor",LocalDate.of(2000,01,01))));
- System.out.println(studentsLibrary);
+
+     Library womensLibrary= new Library( "harlekiny" );
+     Book book1 = new Book( "Diabel ubiera sie u Prady","Lauren Weisberger",LocalDate.of( 2000,01,01 ) );
+     Book book2= new Book( "Portier nosi garnitur od Gabbany","Lauren Weisberger",LocalDate.of( 2005,01,01 ) );
+    Book book3 = new Book( "W pogoni za Harrym Winstonem", "Lauren Weisberger",LocalDate.of( 2008,01,01 ) );
+
+   womensLibrary.books.add( book1 );
+   womensLibrary.books.add( book2 );
+   womensLibrary.books.add( book3 );
+
+System.out.println( womensLibrary.books);
  //Then
-     Assert.assertEquals(5, studentsLibrary.getBooks().size());
+     Assert.assertEquals(3, womensLibrary.getBooks().size());
  }
+
+
 }
