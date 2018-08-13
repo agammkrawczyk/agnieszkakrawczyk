@@ -13,13 +13,12 @@ public class LibraryTestSuite {
         //When
 
         Library womensLibrary = new Library( "harlekiny" );
-        Book book1 = new Book( "Diabel ubiera sie u Prady", "Lauren Weisberger", LocalDate.of( 2000, 01, 01 ) );
-        Book book2 = new Book( "Portier nosi garnitur od Gabbany", "Lauren Weisberger", LocalDate.of( 2005, 01, 01 ) );
-        Book book3 = new Book( "W pogoni za Harrym Winstonem", "Lauren Weisberger", LocalDate.of( 2008, 01, 01 ) );
+        IntStream.iterate(1, n -> n + 1)
+                .limit(3)
+                .forEach(n ->womensLibrary.getBooks().add(new Book( " aaa","bbb",LocalDate.of(2000,01,01))));
 
-        womensLibrary.books.add( book1 );
-        womensLibrary.books.add( book2 );
-        womensLibrary.books.add( book3 );
+        Book bookToRemove = new Book("aaa", "bbb", LocalDate.now());
+        womensLibrary.getBooks().add( bookToRemove );
 
         //Then
         Library clonedLibrary = null;
@@ -39,14 +38,16 @@ public class LibraryTestSuite {
             System.out.println(e);
         }
 
-        womensLibrary.books.remove( book1 );
-        System.out.println("Womens library after remove" + womensLibrary.books );
-        System.out.println( "Cloned library"+  clonedLibrary .books);
-        System.out.println( " Deep cloned Library "+ deepClonedLibrary.books );
 
-        Assert.assertEquals( 2, womensLibrary.getBooks().size() );
-        Assert.assertEquals( 2, clonedLibrary.getBooks().size() );
-        Assert.assertEquals( 3,deepClonedLibrary.getBooks().size() );
+        womensLibrary.getBooks().remove( bookToRemove );
+
+        System.out.println("Womens library after remove" + womensLibrary.getBooks() );
+        System.out.println( "Cloned library"+  clonedLibrary .getBooks());
+        System.out.println( " Deep cloned Library "+ deepClonedLibrary.getBooks() );
+
+        Assert.assertEquals( 3, womensLibrary.getBooks().size() );
+        Assert.assertEquals( 3, clonedLibrary.getBooks().size() );
+        Assert.assertEquals( 4,deepClonedLibrary.getBooks().size() );
     }
 
 
