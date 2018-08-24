@@ -32,7 +32,7 @@ public class ProductDaoTestSuite {
             Assert.assertEquals(id, readProductName.get().getId());
 
             //CleanUp
-            productDao.deleteById( id );
+       //     productDao.deleteById( id );
 
 
     }
