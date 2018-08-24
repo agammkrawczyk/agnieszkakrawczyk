@@ -36,9 +36,9 @@ public class TaskList {
     }
 
     @Id
-   @GeneratedValue
-   @NotNull
-   @Column(name="ID", unique = true)
+    @GeneratedValue
+    @NotNull
+    @Column(name="ID", unique = true)
     public int getId() {
         return id;
     }
