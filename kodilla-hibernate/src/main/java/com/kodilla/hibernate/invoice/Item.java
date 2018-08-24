@@ -4,6 +4,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
+
 @Entity
 @Table(name = "ITEM")
 public class Item {
@@ -11,8 +12,8 @@ public class Item {
     private int quantity;
     private BigDecimal price;
     private BigDecimal value;
-    private Product product;
     private Invoice invoice;
+    private  Product product;
 
     public Item() {
     }
@@ -47,13 +48,13 @@ public class Item {
         return value;
     }
 
-    @ManyToOne(
-            cascade = CascadeType.ALL,
-            fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.ALL,
+            fetch = FetchType.EAGER )
     @JoinColumn(name = "PRODUCT_ID")
     public Product getProduct() {
         return product;
     }
+
 
     @ManyToOne(cascade = CascadeType.ALL,
             fetch = FetchType.EAGER )
@@ -65,6 +66,9 @@ public class Item {
     public void setInvoice(Invoice invoice) {
         this.invoice = invoice;
     }
+
+    public void setProduct(Product product) {
+        this.product = product;}
 
     public void setId(int id) {
         this.id = id;
@@ -82,7 +86,5 @@ public class Item {
         this.value = value;
     }
 
-    public void setProduct(Product product) {
-        this.product = product;
-    }
+
 }

@@ -26,7 +26,6 @@ public class TaskList {
            mappedBy="taskList",
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY)
-
     public List<Task> getTasks() {
         return tasks;
     }
