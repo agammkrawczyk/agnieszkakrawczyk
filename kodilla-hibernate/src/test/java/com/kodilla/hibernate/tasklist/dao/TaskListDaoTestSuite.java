@@ -33,7 +33,7 @@ public class TaskListDaoTestSuite {
         List<TaskList> readTaskList = taskListDao.findByListName(listName);
 
        //Then
-        Assert.assertEquals(2,readTaskList.size());
+        Assert.assertEquals(1,readTaskList.size());
         //cleanUp
         int id = readTaskList.get(0).getId();
         taskListDao.deleteById(id);
@@ -63,7 +63,7 @@ public class TaskListDaoTestSuite {
         Assert.assertNotEquals(0, id);
 
         //CleanUp
-     //   taskListDao.deleteById(id);
+        taskListDao.deleteById(id);
     }
 
 
@@ -113,7 +113,7 @@ public class TaskListDaoTestSuite {
             Assert.assertEquals( 2,durationLonger.size() );
         } finally {
             //CleanUp
-         // taskListDao.deleteById(id);
+          taskListDao.deleteById(id);
         }
     }
 }

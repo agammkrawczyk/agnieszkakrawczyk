@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.patterns.strategy.social.UserTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-10-23T18:19:52" hostname="Agniecha1" time="0.031">
+  <properties/>
+  <testcase name="testDefaultSharingStrategies" classname="com.kodilla.patterns.strategy.social.UserTestSuite" time="0.021"/>
+  <testcase name="testIndividualSharingStrategy" classname="com.kodilla.patterns.strategy.social.UserTestSuite" time="0.007"/>
+  <system-out><![CDATA[Mary  is a Millenials so she share post on Facebook
+Sarah  is a YGeneration member so she share post on Snapchat
+Mike is a ZGeneration member so he share post on  Twitter
+Moris is a Millenials so he share post on Facebook
+Moris changed his mind  and now  he prefer to share post on Snapchat
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

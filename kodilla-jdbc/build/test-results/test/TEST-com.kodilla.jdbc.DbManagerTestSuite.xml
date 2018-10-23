@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.jdbc.DbManagerTestSuite" tests="3" skipped="3" failures="0" errors="0" timestamp="2018-10-23T18:19:27" hostname="Agniecha1" time="0.017">
+  <properties/>
+  <testcase name="testUserPostsMoreThanTwo" classname="com.kodilla.jdbc.DbManagerTestSuite" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase name="testSelectUsers" classname="com.kodilla.jdbc.DbManagerTestSuite" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase name="testConnect" classname="com.kodilla.jdbc.DbManagerTestSuite" time="0.001">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

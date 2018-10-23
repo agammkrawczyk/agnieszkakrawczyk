@@ -6,10 +6,7 @@ include 'kodilla-exception'
 include 'kodilla-good-patterns'
 include 'kodilla-spring-intro'
 
-findProject(':kodilla-spring-intro')?.name = 'kodilla-spring-intro '
 include 'kodilla-jdbc'
-
-
 
 include 'kodilla-spring1-web'
 include 'kodilla-patterns'

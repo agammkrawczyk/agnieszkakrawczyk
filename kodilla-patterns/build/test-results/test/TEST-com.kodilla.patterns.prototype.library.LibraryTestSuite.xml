@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.patterns.prototype.library.LibraryTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-10-23T18:19:51" hostname="Agniecha1" time="0.224">
+  <properties/>
+  <testcase name="testGetBooks" classname="com.kodilla.patterns.prototype.library.LibraryTestSuite" time="0.224"/>
+  <system-out><![CDATA[Womens library after remove[Book{title=' aaa', author='bbb', publicationDate=2000-01-01}, Book{title=' aaa', author='bbb', publicationDate=2000-01-01}, Book{title=' aaa', author='bbb', publicationDate=2000-01-01}]
+Cloned library[Book{title=' aaa', author='bbb', publicationDate=2000-01-01}, Book{title=' aaa', author='bbb', publicationDate=2000-01-01}, Book{title=' aaa', author='bbb', publicationDate=2000-01-01}]
+ Deep cloned Library [Book{title='aaa', author='bbb', publicationDate=2018-10-23}, Book{title=' aaa', author='bbb', publicationDate=2000-01-01}, Book{title=' aaa', author='bbb', publicationDate=2000-01-01}, Book{title=' aaa', author='bbb', publicationDate=2000-01-01}]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
