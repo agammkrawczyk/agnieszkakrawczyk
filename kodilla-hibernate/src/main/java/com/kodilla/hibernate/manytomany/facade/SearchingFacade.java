@@ -6,16 +6,21 @@ import com.kodilla.hibernate.manytomany.dao.CompanyDao;
 import com.kodilla.hibernate.manytomany.dao.EmployeeDao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class SearchingFacade {
+    @Autowired
+    private CompanyDao companyDao;
+    @Autowired
+    private EmployeeDao employeeDao;
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SearchingFacade.class);
 
-    public List<Employee> processEmployeeSearch(EmployeeDao employeeDao, String employeeLastName) throws SeacrhingInEntityException {
+    public List<Employee> processEmployeeSearch( String employeeLastName) throws SeacrhingInEntityException {
         if (employeeLastName.length() < 1) {
             LOGGER.error(SeacrhingInEntityException.ERR_NULL_LENGHT);
             throw new SeacrhingInEntityException(SeacrhingInEntityException.ERR_NULL_LENGHT);
@@ -32,7 +37,7 @@ public class SearchingFacade {
 
         return employeesSreachingResult;
     }
-    public List<Company> processCompanySearch(CompanyDao companyDao, String firstThreeLetters) throws SeacrhingInEntityException {
+    public List<Company> processCompanySearch( String firstThreeLetters) throws SeacrhingInEntityException {
         if (firstThreeLetters.length() != 3) {
             LOGGER.error(SeacrhingInEntityException.ERR_WRONG_LENGHT);
             throw new SeacrhingInEntityException(SeacrhingInEntityException.ERR_NULL_LENGHT);

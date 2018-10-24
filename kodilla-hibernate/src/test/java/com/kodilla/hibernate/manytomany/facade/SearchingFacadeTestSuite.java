@@ -36,12 +36,12 @@ public class SearchingFacadeTestSuite {
         //When
         companyDao.save(company1);
         int companyId = company1.getId();
-        List<Company> companiesWithThreeFirsLetters = searchingFacade.processCompanySearch(companyDao, "kod");
+        List<Company> companiesWithThreeFirsLetters = searchingFacade.processCompanySearch( "kod");
         //Then
         assertNotEquals(0, company1);
         assertEquals(1, companiesWithThreeFirsLetters.size());
         //CleanUp
-       // companyDao.deleteById(companyId);
+        companyDao.deleteById(companyId);
     }
     @Test
     public void testSearchFacadeEmployeeName()throws SeacrhingInEntityException{
@@ -53,12 +53,12 @@ public class SearchingFacadeTestSuite {
         //When
         employeeDao.save( employee1 );
         int emmployeeId=employee1.getId();
-        List<Employee>employeesByLastName=searchingFacade.processEmployeeSearch( employeeDao,"Nowak" );
+        List<Employee>employeesByLastName=searchingFacade.processEmployeeSearch( "Nowak" );
         //Then
         assertNotEquals(0, employee1);
         assertEquals(1, employeesByLastName.size());
         //CleanUp
-      //  employeeDao.deleteById(emmployeeId);
+        employeeDao.deleteById(emmployeeId);
 
 
     }
