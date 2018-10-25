@@ -4,9 +4,18 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
-@NamedNativeQuery( name="Company.findCompanyByFewLetters",
+
+@NamedNativeQueries( {
+        @NamedNativeQuery(name="Company.findCompanyByFewLetters",
         query = "SELECT * FROM COMPANIES WHERE LEFT(company_name, 3) = :THRELETTERS ",
-resultClass = Company.class)
+resultClass = Company.class),
+        @NamedNativeQuery(
+                name = "Company.findCompanyBySigns",
+                query = "SELECT * FROM COMPANIES WHERE COMPANY_NAME LIKE CONCAT('%',:SIGNS, '%' )",
+                resultClass = Company.class
+        )
+})
+
 
 @Entity
 @Table(name= "COMPANIES")

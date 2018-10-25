@@ -5,10 +5,18 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
-
-@NamedQuery( name="Employee.findEmployeeByName",
-        query="FROM Employee WHERE lastname= :LASTNAME")
-
+@NamedNativeQueries({
+        @NamedNativeQuery(
+                name = "Employee.findEmployeeByName",
+                query = "SELECT * FROM EMPLOYEES WHERE LASTNAME = :LASTNAME",
+                resultClass = Employee.class
+        ),
+        @NamedNativeQuery(
+                name = "Employee.findEmployeeBySigns",
+                query = "SELECT * FROM EMPLOYEES WHERE LASTNAME LIKE CONCAT('%',:SIGNS, '%') ",
+                resultClass = Employee.class
+        )
+})
 @Entity
 @Table(name = "EMPLOYEES")
 public class Employee {

@@ -44,19 +44,19 @@ public class SearchingFacadeTestSuite {
         companyDao.deleteById(companyId);
     }
     @Test
-    public void testSearchFacadeEmployeeName()throws SeacrhingInEntityException{
+    public void testSearchFacadeEmployeeBySigns()throws SeacrhingInEntityException{
         //Given
-        Employee employee1 = new Employee("Jan", "Nowak");
+        Employee employee1 = new Employee("Mateusz", "Morawiecki");
         Company company1 = new Company("IBM");
         company1.getEmployees().add(employee1);
         employee1.getCompanies().add(company1);
         //When
         employeeDao.save( employee1 );
         int emmployeeId=employee1.getId();
-        List<Employee>employeesByLastName=searchingFacade.processEmployeeSearch( "Nowak" );
+        List<Employee>employeesBySigns=searchingFacade.processEmployeeSearch( "wie" );
         //Then
         assertNotEquals(0, employee1);
-        assertEquals(1, employeesByLastName.size());
+        assertEquals(1, employeesBySigns.size());
         //CleanUp
         employeeDao.deleteById(emmployeeId);
 

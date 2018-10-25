@@ -92,7 +92,7 @@ public class CompanyDaoTestSuite {
         companyDao.save( company2 );
         int company2ID = company2.getId();
 
-        List<Company> findCompany = companyDao.findCompanyByFewLetters( "Air" );
+        List<Company> findCompany = companyDao.findCompanyByFewLetters( "air" );
 // Then
 
         Assert.assertEquals( 1, findCompany.size() );
@@ -122,7 +122,7 @@ public class CompanyDaoTestSuite {
         int cID = employee.getId();
         employeeDao.save( employee1 );
         int c1ID = employee1.getId();
-//When
+        //When
         List<Employee> employeesByLastName = employeeDao.findEmployeeByName( "Nowak" );
 
         //Then
