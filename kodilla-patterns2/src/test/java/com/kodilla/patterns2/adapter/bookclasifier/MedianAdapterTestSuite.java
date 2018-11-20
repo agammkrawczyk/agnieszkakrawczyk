@@ -14,7 +14,7 @@ public class MedianAdapterTestSuite {
         //Given
         Set<Book> bookSet = new HashSet<>();
         bookSet.add(new Book("Jacek Walkiewicz", "Ikhakima", 2012, "1"));
-        bookSet.add(new Book("Kamila Rowinska", "Konieta Niezalezna", 2014, "2"));
+        bookSet.add(new Book("Kamila Rowinska", "Kobieta Niezalezna", 2014, "2"));
         bookSet.add(new Book("Jacek Walkiewicz", "Rozmyslnik", 2016, "3"));
         MedianAdapter medianAdapter = new MedianAdapter();
         //When
